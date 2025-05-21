@@ -30,15 +30,20 @@ Antes de começar, você precisará:
 1. Faça login no [Console AWS](https://console.aws.amazon.com/)
 2. Navegue até o serviço EMR
 
-🖼️ **Print da tela inicial do AWS Console**
+![image](https://github.com/user-attachments/assets/f615c837-8f0c-4acc-a92c-56a704e45818)
+
 ➡️ Na barra de pesquisa superior, digite "EMR" e selecione o serviço "EMR" nos resultados.
 
 ### Passo 2: Iniciar a Criação do Cluster
 
 1. Na página inicial do EMR, clique no botão "Criar cluster"
 
-🖼️ **Print da página inicial do EMR**
-➡️ Localize o botão azul "Criar cluster" no canto superior direito da tela e clique nele.
+![image](https://github.com/user-attachments/assets/42e8797b-91c2-496f-a876-dcfb0ab94d7c)
+
+➡️ Localize o botão amarelo "Criar cluster" no canto superior direito da tela e clique nele.
+
+![image](https://github.com/user-attachments/assets/0db822a5-c1b0-46e6-8c10-9d8e17e40798)
+
 
 ### Passo 3: Configurações Básicas do Cluster
 
@@ -50,7 +55,8 @@ Nome do cluster: MeuClusterSpark
 
 2. Em "Aplicações", selecione a opção "Spark"
 
-🖼️ **Print da tela "Criar Cluster" no EMR Console da AWS**
+![image](https://github.com/user-attachments/assets/c295fb3f-9a4f-457a-ad64-bf3555734f14)
+
 ➡️ Selecione a versão emr-6.15.0, role até a seção "Applications" e marque Spark.
 
 💡 **Dica**: Escolha a versão mais recente do EMR disponível para ter acesso às últimas funcionalidades e correções de bugs do Spark.
@@ -65,14 +71,16 @@ Tipo de instância dos nós core: m5.xlarge
 Contagem de nós core: 2
 ```
 
-🖼️ **Print da seção de configuração de hardware**
+![image](https://github.com/user-attachments/assets/92dfd151-281f-44d5-8f66-2f865258e877)
+
 ➡️ Selecione os tipos de instância na lista suspensa e defina a quantidade de nós.
 
 💡 **Dica**: Para ambientes de teste, m5.xlarge oferece um bom equilíbrio entre custo e desempenho. Para cargas de trabalho de produção, considere instâncias com mais memória (série r5) ou otimizadas para computação (série c5).
 
 2. Para ambientes de teste, você pode desativar o auto-scaling:
 
-🖼️ **Print da seção de auto-scaling**
+![image](https://github.com/user-attachments/assets/786662ed-e8ae-46e6-b3f7-65625da6d948)
+
 ➡️ Desmarque a opção "Ativar auto-scaling" se estiver apenas testando.
 
 ### Passo 5: Configurações Gerais do Cluster
@@ -84,10 +92,14 @@ Registro em log: Ativado
 Bucket S3: s3://meu-bucket-logs-emr/logs/
 ```
 
-🖼️ **Print da seção de configurações gerais**
+![image](https://github.com/user-attachments/assets/2f82518c-bd01-447f-aabf-b1e8b3a54402)
+
 ➡️ Ative o registro em log e especifique um bucket S3 para armazenar os logs.
 
 💡 **Dica**: Sempre mantenha os logs ativados para facilitar a depuração de problemas.
+
+![image](https://github.com/user-attachments/assets/1aa281f2-c02c-438c-9aef-fae19d53e215)
+
 
 ### Passo 6: Configurações de Segurança
 
@@ -97,7 +109,8 @@ Bucket S3: s3://meu-bucket-logs-emr/logs/
 Par de chaves EC2: MeuParDeChaves
 ```
 
-🖼️ **Print da seção de segurança**
+![image](https://github.com/user-attachments/assets/266c9142-f97c-4f55-8a62-b4e96560e848)
+
 ➡️ Selecione um par de chaves existente ou crie um novo.
 
 💡 **Dica**: Se você não tiver um par de chaves, clique em "Criar par de chaves" e siga as instruções para criar e baixar um novo par.
@@ -135,7 +148,8 @@ Perfil de serviço do EMR: EMR_DefaultRole
 Perfil de instância do EC2: EMR_EC2_DefaultRole
 ```
 
-🖼️ **Print da seção de permissões**
+![image](https://github.com/user-attachments/assets/f6f53a87-06d5-4bdf-a6a3-c9d0895a7c47)
+
 ➡️ Selecione os perfis padrão ou crie perfis personalizados se necessário.
 
 💡 **Dica**: Para operações básicas, os perfis padrão são suficientes. Para acesso a recursos específicos da AWS, você precisará personalizar as políticas IAM.
@@ -145,14 +159,14 @@ Perfil de instância do EC2: EMR_EC2_DefaultRole
 1. Revise todas as configurações
 2. Clique em "Criar cluster"
 
-🖼️ **Print da tela de revisão**
+
 ➡️ Verifique todas as configurações e clique no botão azul "Criar cluster" no final da página.
 
 ## Monitorando a Criação do Cluster
 
 Após iniciar a criação, você será redirecionado para a página de detalhes do cluster:
 
-🖼️ **Print da página de detalhes do cluster**
+
 ➡️ Observe o status do cluster, que inicialmente será "Iniciando".
 
 O processo de criação do cluster pode levar de 5 a 20 minutos, dependendo das configurações escolhidas.
@@ -170,7 +184,7 @@ Para acessar o cluster via SSH, você precisa garantir que:
 
 Na página de detalhes do cluster, localize a seção "Resumo":
 
-🖼️ **Print da seção de resumo do cluster**
+
 ➡️ Anote o "DNS público primário" listado nesta seção.
 
 ### Configurando Permissões do Arquivo de Chave
