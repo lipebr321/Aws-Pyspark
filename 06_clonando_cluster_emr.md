@@ -29,7 +29,8 @@ Antes de começar, você precisará:
 1. Faça login no [Console AWS](https://console.aws.amazon.com/)
 2. Navegue até o serviço EMR
 
-🖼️ **Print da tela inicial do AWS Console**
+![image](https://github.com/user-attachments/assets/2382bf4e-fc6e-4841-bfa2-95b6ce1e2cfb)
+
 ➡️ Na barra de pesquisa superior, digite "EMR" e selecione o serviço "EMR" nos resultados.
 
 ### Passo 2: Localizar o Cluster a Ser Clonado
@@ -37,7 +38,8 @@ Antes de começar, você precisará:
 1. Na página inicial do EMR, você verá a lista de clusters
 2. Identifique o cluster que deseja clonar
 
-🖼️ **Print da lista de clusters no console EMR**
+![image](https://github.com/user-attachments/assets/e5c226bb-1ade-436b-bcda-459eac94f780)
+
 ➡️ Localize o cluster que deseja clonar na lista de clusters.
 
 ### Passo 3: Iniciar o Processo de Clonagem
@@ -45,7 +47,6 @@ Antes de começar, você precisará:
 1. Selecione o cluster que deseja clonar clicando na caixa de seleção ao lado do nome
 2. No menu "Ações", selecione "Clone"
 
-🖼️ **Print do menu Ações com a opção Clone destacada**
 ➡️ Clique no menu "Ações" e selecione a opção "Clone" no menu suspenso.
 
 Alternativamente, você pode usar o recurso "Re-executar cluster com as mesmas configurações":
@@ -65,7 +66,7 @@ Após selecionar "Clone", você será direcionado para a página de criação de
 4. Verifique as configurações de hardware (tipos de instância, contagem de nós)
 5. Revise as configurações de segurança e rede
 
-🖼️ **Print da tela de revisão de configurações**
+
 ➡️ Revise todas as configurações pré-preenchidas e faça os ajustes necessários.
 
 ### Passo 5: Ajustar Configurações Específicas
@@ -98,7 +99,7 @@ Algumas configurações que você pode querer ajustar:
 
 1. Após revisar e ajustar todas as configurações, clique em "Criar cluster"
 
-🖼️ **Print do botão "Criar cluster" na parte inferior da página**
+
 ➡️ Clique no botão azul "Criar cluster" após revisar todas as configurações.
 
 2. Você será redirecionado para a página de detalhes do novo cluster, onde poderá monitorar o progresso da criação
@@ -112,7 +113,7 @@ O recurso "Re-executar" é uma forma mais rápida de clonar um cluster quando vo
 1. Na lista de clusters, selecione o cluster que deseja clonar
 2. No menu "Ações", selecione "Re-executar cluster com as mesmas configurações"
 
-🖼️ **Print do menu Ações com a opção "Re-executar cluster" destacada**
+
 ➡️ Clique no menu "Ações" e selecione a opção "Re-executar cluster com as mesmas configurações".
 
 ### Passo 2: Confirmar a Re-execução
@@ -120,7 +121,6 @@ O recurso "Re-executar" é uma forma mais rápida de clonar um cluster quando vo
 1. Uma janela de confirmação será exibida
 2. Clique em "Re-executar" para confirmar
 
-🖼️ **Print da janela de confirmação de re-execução**
 ➡️ Clique no botão "Re-executar" na janela de confirmação.
 
 3. Um novo cluster será criado com as mesmas configurações do original
@@ -147,7 +147,7 @@ Um aspecto fundamental ao trabalhar com clusters EMR é entender como os dados s
 - **Durável**: Oferece 99,999999999% (11 noves) de durabilidade
 - **Escalável**: Capacidade praticamente ilimitada
 
-🖼️ **Diagrama comparando HDFS e S3**
+
 ➡️ O HDFS armazena dados nos nós do cluster, enquanto o S3 armazena dados externamente, permitindo persistência além do ciclo de vida do cluster.
 
 ### Benefícios da Persistência em S3
@@ -163,6 +163,9 @@ Um aspecto fundamental ao trabalhar com clusters EMR é entender como os dados s
 5. **Integração com outros Serviços AWS**: Fácil integração com serviços como Athena, Glue e Redshift
 
 ### Configurando Persistência em S3
+
+![image](https://github.com/user-attachments/assets/dd548b21-17b7-4601-a433-924490722ce3)
+
 
 Para garantir que seus dados sejam persistentes ao clonar clusters, siga estas práticas:
 
