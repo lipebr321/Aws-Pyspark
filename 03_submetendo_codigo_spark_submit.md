@@ -110,8 +110,9 @@ if __name__ == "__main__":
     main()
 ```
 
-🖼️ **Print do código no editor de texto**
-➡️ Crie o arquivo processador_dados.py com o código acima usando um editor como nano ou vim.
+![image](https://github.com/user-attachments/assets/56e3dc65-52d2-48aa-a2b6-8b2b0b5afb43)
+
+➡️ Crie o arquivo processador_dados.py com o código acima usando um editor como vscode ou vim.
 
 ### Passo 2: Fazer Upload do Script para o S3
 
@@ -139,7 +140,7 @@ spark-submit \
   s3://meu-bucket/scripts/processador_dados.py
 ```
 
-🖼️ **Print da tela do terminal com o comando spark-submit**
+
 ➡️ Execute o comando spark-submit conforme mostrado acima, substituindo o caminho do S3 pelo seu bucket.
 
 💡 **Dica**: Use o parâmetro `--conf spark.yarn.submit.waitAppCompletion=true` para que o comando `spark-submit` aguarde a conclusão da aplicação antes de retornar.
@@ -160,7 +161,7 @@ No modo `cluster`, o driver da aplicação Spark é executado dentro do cluster 
 
 No modo `client` (padrão), o driver é executado na máquina que submete o job, o que é útil para desenvolvimento e debugging.
 
-🖼️ **Diagrama comparando deploy-mode client vs cluster**
+
 ➡️ No modo client, o driver roda na máquina que submete o job. No modo cluster, o driver roda dentro do YARN.
 
 ### Configurações Adicionais Úteis
@@ -223,7 +224,7 @@ Para acessar essas interfaces, você precisa configurar um túnel SSH:
 ssh -i /caminho/para/MeuParDeChaves.pem -N -L 8088:localhost:8088 -L 18080:localhost:18080 hadoop@ec2-xx-xx-xx-xx.compute-1.amazonaws.com
 ```
 
-🖼️ **Print da interface web do YARN ResourceManager**
+
 ➡️ Acesse http://localhost:8088 no seu navegador após configurar o túnel SSH.
 
 ## Monitorando o Progresso da Aplicação
@@ -247,7 +248,7 @@ Na interface do ResourceManager (http://localhost:8088), você pode:
 3. Monitorar o uso de recursos
 4. Matar aplicações se necessário
 
-🖼️ **Print da página de detalhes da aplicação no YARN**
+
 ➡️ Clique no ID da aplicação na interface do ResourceManager para ver detalhes.
 
 ## Exemplos Avançados de Spark-Submit
