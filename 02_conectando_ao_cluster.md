@@ -33,14 +33,14 @@ Antes de começar, você precisará:
 ssh -i /caminho/para/MeuParDeChaves.pem hadoop@ec2-xx-xx-xx-xx.compute-1.amazonaws.com
 ```
 
-🖼️ **Print da tela do terminal com comando SSH**
+
 ➡️ Digite o comando SSH substituindo o caminho da chave e o endereço DNS do nó master.
 
 💡 **Dica**: Substitua `/caminho/para/MeuParDeChaves.pem` pelo caminho completo para o seu arquivo .pem e `ec2-xx-xx-xx-xx.compute-1.amazonaws.com` pelo DNS público do seu nó master.
 
 3. Na primeira conexão, você receberá um aviso sobre a autenticidade do host. Digite "yes" para continuar.
 
-🖼️ **Print da tela de confirmação de host**
+
 ➡️ Digite "yes" quando solicitado para adicionar o host à lista de hosts conhecidos.
 
 4. Se a conexão for bem-sucedida, você verá o prompt do EMR:
@@ -62,7 +62,6 @@ https://aws.amazon.com/amazon-linux-2/
    - Clique em "Load" e selecione seu arquivo .pem
    - Clique em "Save private key" para gerar o arquivo .ppk
 
-🖼️ **Print da tela do PuTTYgen**
 ➡️ Clique em "Load" para carregar o arquivo .pem e depois em "Save private key" para salvar como .ppk.
 
 2. Configure a conexão no PuTTY:
@@ -70,7 +69,6 @@ https://aws.amazon.com/amazon-linux-2/
    - No menu lateral, navegue até Connection > SSH > Auth
    - Em "Private key file for authentication", clique em "Browse" e selecione o arquivo .ppk
 
-🖼️ **Print da tela de configuração do PuTTY**
 ➡️ Configure o host e navegue até a seção de autenticação para selecionar o arquivo .ppk.
 
 3. Clique em "Open" para iniciar a conexão
@@ -221,7 +219,7 @@ O Spark-Shell é uma interface interativa que permite testar comandos Spark em t
 spark-shell
 ```
 
-🖼️ **Print da tela inicial do Spark-Shell**
+
 ➡️ Execute o comando spark-shell e aguarde o carregamento da interface interativa.
 
 Você verá uma interface Scala com o prompt `scala>`. Isso indica que o Spark-Shell está pronto para receber comandos.
@@ -315,7 +313,7 @@ Se você preferir Python ao invés de Scala, pode usar o PySpark Shell:
 pyspark
 ```
 
-🖼️ **Print da tela inicial do PySpark**
+
 ➡️ Execute o comando pyspark e aguarde o carregamento da interface interativa Python.
 
 ### Exemplos Básicos no PySpark
