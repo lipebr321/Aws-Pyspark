@@ -33,7 +33,7 @@ Antes de executar o job, verifique se o arquivo wheel está acessível no S3:
 aws s3 ls s3://meu-bucket/wheels/meu_pacote_spark-0.1.0-py3-none-any.whl
 ```
 
-🖼️ **Print do terminal mostrando o resultado do comando aws s3 ls**
+
 ➡️ Execute o comando para verificar se o arquivo wheel está disponível no S3.
 
 ### Passo 2: Preparar o Script Principal
@@ -115,7 +115,6 @@ spark-submit \
   --output s3://meu-bucket/resultados/vendas_processadas
 ```
 
-🖼️ **Print do terminal executando o comando spark-submit**
 ➡️ Execute o comando spark-submit conforme mostrado acima, substituindo os caminhos do S3 pelos seus.
 
 💡 **Dica**: O parâmetro `--py-files` pode receber múltiplos arquivos separados por vírgula, incluindo arquivos .py, .zip ou .whl.
@@ -197,7 +196,7 @@ yarn application -status application_1621234567890_0001
 yarn logs -applicationId application_1621234567890_0001
 ```
 
-🖼️ **Print do terminal mostrando o resultado do comando yarn application -list**
+
 ➡️ Execute o comando para listar as aplicações em execução no YARN.
 
 ### Via Interface Web
@@ -213,7 +212,7 @@ Para acessar essas interfaces, configure um túnel SSH:
 ssh -i /caminho/para/MeuParDeChaves.pem -N -L 8088:localhost:8088 -L 18080:localhost:18080 hadoop@ec2-xx-xx-xx-xx.compute-1.amazonaws.com
 ```
 
-🖼️ **Print da interface web do YARN ResourceManager**
+
 ➡️ Acesse http://localhost:8088 no seu navegador após configurar o túnel SSH.
 
 ## Validando o Resultado dos Dados Processados
