@@ -52,7 +52,8 @@ meu_projeto_spark/
     └── test_validacoes.py
 ```
 
-🖼️ **Print da estrutura de pastas no VS Code**
+![image](https://github.com/user-attachments/assets/1dbe1c8e-db2b-4f27-94b1-e129e3faf10e)
+
 ➡️ Abra o VS Code e crie a estrutura de pastas conforme mostrado acima.
 
 ### Criando a Estrutura de Pastas
@@ -74,6 +75,39 @@ touch meu_projeto_spark/tests/__init__.py
 touch meu_projeto_spark/setup.py
 touch meu_projeto_spark/README.md
 touch meu_projeto_spark/requirements.txt
+```
+
+### Criando a Estrutura de Pastas vs code terminal
+
+```bash
+
+# Criar estrutura de diretórios
+New-Item -ItemType Directory -Path "meu_projeto_spark/src/meu_pacote" -Force
+New-Item -ItemType Directory -Path "meu_projeto_spark/src/scripts" -Force
+New-Item -ItemType Directory -Path "meu_projeto_spark/tests" -Force
+
+# Criar arquivos __init__.py
+New-Item -ItemType File -Path "meu_projeto_spark/src/meu_pacote/__init__.py" -Force
+New-Item -ItemType File -Path "meu_projeto_spark/src/scripts/__init__.py" -Force
+New-Item -ItemType File -Path "meu_projeto_spark/tests/__init__.py" -Force
+
+# Criar módulos do pacote
+New-Item -ItemType File -Path "meu_projeto_spark/src/meu_pacote/transformacoes.py" -Force
+New-Item -ItemType File -Path "meu_projeto_spark/src/meu_pacote/validacoes.py" -Force
+New-Item -ItemType File -Path "meu_projeto_spark/src/meu_pacote/utils.py" -Force
+
+# Criar script principal
+New-Item -ItemType File -Path "meu_projeto_spark/src/scripts/processar_dados.py" -Force
+
+# Criar arquivos de configuração e documentação
+New-Item -ItemType File -Path "meu_projeto_spark/setup.py" -Force
+New-Item -ItemType File -Path "meu_projeto_spark/README.md" -Force
+New-Item -ItemType File -Path "meu_projeto_spark/requirements.txt" -Force
+
+# Criar arquivos de teste
+New-Item -ItemType File -Path "meu_projeto_spark/tests/test_transformacoes.py" -Force
+New-Item -ItemType File -Path "meu_projeto_spark/tests/test_validacoes.py" -Force
+
 ```
 
 ## Criando os Arquivos do Projeto
@@ -112,15 +146,17 @@ setup(
 )
 ```
 
-🖼️ **Print do arquivo setup.py no VS Code**
+![image](https://github.com/user-attachments/assets/9b5831a0-a571-4474-bf93-4144748eb1cd)
+
 ➡️ Crie o arquivo setup.py com o conteúdo acima.
 
 ### 2. README.md
 
 ```markdown
-# Meu Pacote Spark
 
 Pacote Python para processamento de dados com Apache Spark no EMR.
+
+```
 
 ## Instalação
 
@@ -134,8 +170,6 @@ pip install meu_pacote_spark-0.1.0-py3-none-any.whl
 from meu_pacote.transformacoes import transformar_dados
 from meu_pacote.validacoes import validar_schema
 
-# Seu código aqui
-```
 ```
 
 ### 3. requirements.txt
@@ -446,8 +480,8 @@ Navegue até o diretório raiz do projeto e execute:
 ```bash
 python setup.py bdist_wheel
 ```
+![image](https://github.com/user-attachments/assets/7a5d5939-2e91-4b9b-b522-5b86587332d5)
 
-🖼️ **Print do terminal executando o comando python setup.py bdist_wheel**
 ➡️ Execute o comando no terminal integrado do VS Code e observe a saída.
 
 Este comando criará um diretório `dist` contendo o arquivo wheel, com um nome similar a:
@@ -474,7 +508,6 @@ ls -la dist/
 aws s3 cp dist/meu_pacote_spark-0.1.0-py3-none-any.whl s3://meu-bucket/wheels/
 ```
 
-🖼️ **Print do terminal executando o comando aws s3 cp**
 ➡️ Execute o comando aws s3 cp e observe a saída confirmando o upload.
 
 💡 **Dica**: Certifique-se de que o usuário que está executando o comando tem permissões para escrever no bucket S3.
