@@ -110,9 +110,8 @@ if __name__ == "__main__":
     main()
 ```
 
-![image](https://github.com/user-attachments/assets/56e3dc65-52d2-48aa-a2b6-8b2b0b5afb43)
 
-➡️ Crie o arquivo processador_dados.py com o código acima usando um editor como vscode ou vim.
+➡️ Crie o arquivo processador_dados.py com o código acima usando um editor como nano ou vim.
 
 ### Passo 2: Fazer Upload do Script para o S3
 
