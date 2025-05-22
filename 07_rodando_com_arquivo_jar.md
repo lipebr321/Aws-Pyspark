@@ -68,8 +68,6 @@ assembly / assemblyMergeStrategy := {
   case x => MergeStrategy.first
 }
 ```
-
-🖼️ **Print do arquivo build.sbt no editor**
 ➡️ Crie o arquivo build.sbt com o conteúdo acima.
 
 💡 **Dica**: O modificador `% "provided"` indica que as dependências do Spark não serão incluídas no JAR final, pois elas já estão disponíveis no ambiente de execução do EMR.
@@ -146,7 +144,7 @@ object SparkApp {
 }
 ```
 
-🖼️ **Print do código Scala no editor**
+
 ➡️ Crie o arquivo SparkApp.scala com o conteúdo acima.
 
 ### Compilando o Projeto com SBT
@@ -161,7 +159,7 @@ cd meu-projeto-spark
 sbt clean assembly
 ```
 
-🖼️ **Print do terminal executando o comando sbt clean assembly**
+
 ➡️ Execute o comando e observe a saída mostrando o processo de compilação.
 
 O arquivo JAR será gerado em `target/scala-2.12/meu-projeto-spark-assembly-1.0.jar`.
@@ -262,7 +260,7 @@ Após compilar o JAR, você precisa fazer upload para o S3 e executá-lo no clus
 aws s3 cp target/scala-2.12/meu-projeto-spark-assembly-1.0.jar s3://meu-bucket/jars/
 ```
 
-🖼️ **Print do terminal executando o comando aws s3 cp**
+
 ➡️ Execute o comando aws s3 cp e observe a saída confirmando o upload.
 
 ### Passo 2: Executar o JAR com Spark-Submit
@@ -277,7 +275,7 @@ spark-submit \
   s3://meu-bucket/resultados/vendas_processadas_scala
 ```
 
-🖼️ **Print do terminal executando o comando spark-submit**
+
 ➡️ Execute o comando spark-submit conforme mostrado acima, substituindo os caminhos do S3 pelos seus.
 
 ### Parâmetros Específicos para JARs
@@ -323,7 +321,7 @@ spark-submit \
 3. **Uso de Memória**:
    - Maior consumo de memória devido à duplicação de dados entre JVM e Python
 
-🖼️ **Diagrama da arquitetura PySpark**
+
 ➡️ O PySpark utiliza Py4J para comunicação entre o código Python e o Spark Core na JVM.
 
 #### Java/Scala (.jar)
@@ -340,7 +338,7 @@ spark-submit \
 3. **Uso de Memória**:
    - Mais eficiente, sem duplicação de dados entre ambientes
 
-🖼️ **Diagrama da arquitetura Spark com Java/Scala**
+
 ➡️ Aplicações Java/Scala são executadas diretamente na JVM, sem camadas intermediárias.
 
 ### Quando Usar Cada Um
