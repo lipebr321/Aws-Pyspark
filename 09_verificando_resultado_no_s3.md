@@ -34,7 +34,7 @@ Os arquivos Parquet são um formato colunar otimizado para análise de dados, am
 1. Faça login no [Console AWS](https://console.aws.amazon.com/)
 2. Navegue até o serviço S3
 
-🖼️ **Print da tela inicial do AWS Console**
+
 ➡️ Na barra de pesquisa superior, digite "S3" e selecione o serviço "S3" nos resultados.
 
 #### Passo 2: Navegar até o Bucket
@@ -42,7 +42,7 @@ Os arquivos Parquet são um formato colunar otimizado para análise de dados, am
 1. Na lista de buckets, clique no bucket onde seus dados foram salvos
 2. Navegue pelos prefixos (diretórios) até encontrar seus dados processados
 
-🖼️ **Print da lista de buckets no console S3**
+
 ➡️ Clique no nome do bucket que contém seus dados processados.
 
 #### Passo 3: Explorar a Estrutura de Particionamento
@@ -66,7 +66,7 @@ meu-bucket/
                 └── part-00001-xxxx.parquet
 ```
 
-🖼️ **Print da estrutura de particionamento no console S3**
+
 ➡️ Navegue pelos diretórios particionados para visualizar a estrutura.
 
 #### Passo 4: Verificar Metadados dos Arquivos
@@ -74,7 +74,6 @@ meu-bucket/
 1. Clique em um arquivo Parquet
 2. Na aba "Visão geral", você verá metadados como tamanho, data de modificação, classe de armazenamento, etc.
 
-🖼️ **Print da página de detalhes de um arquivo Parquet**
 ➡️ Clique em um arquivo Parquet e observe os metadados disponíveis.
 
 ### Usando a AWS CLI
@@ -94,7 +93,7 @@ aws s3 ls s3://meu-bucket/resultados/vendas_processadas/ --recursive
 aws s3 ls s3://meu-bucket/resultados/vendas_processadas/ --recursive | grep .parquet
 ```
 
-🖼️ **Print do terminal mostrando o resultado do comando aws s3 ls**
+
 ➡️ Execute o comando aws s3 ls e observe a lista de objetos no S3.
 
 #### Verificar Tamanho Total dos Dados
@@ -170,7 +169,7 @@ Salve este código em um arquivo `verificar_dados.py` e execute-o no cluster EMR
 spark-submit verificar_dados.py
 ```
 
-🖼️ **Print do terminal mostrando o resultado da execução do script**
+
 ➡️ Execute o script e observe os resultados da verificação dos dados.
 
 ## Visualizando o Conteúdo com Athena (Bônus)
@@ -182,7 +181,7 @@ O Amazon Athena é um serviço de consulta interativa que permite analisar dados
 1. Faça login no [Console AWS](https://console.aws.amazon.com/)
 2. Navegue até o serviço Athena
 
-🖼️ **Print da tela inicial do Athena**
+
 ➡️ Na barra de pesquisa superior, digite "Athena" e selecione o serviço "Athena" nos resultados.
 
 ### Passo 2: Configurar o Local de Resultados
@@ -196,7 +195,7 @@ Antes de usar o Athena, você precisa configurar um local no S3 para armazenar o
    ```
 3. Clique em "Salvar"
 
-🖼️ **Print da tela de configurações do Athena**
+
 ➡️ Configure o local dos resultados de consulta no S3.
 
 ### Passo 3: Criar um Banco de Dados
@@ -206,7 +205,7 @@ Antes de usar o Athena, você precisa configurar um local no S3 para armazenar o
 3. Digite um nome para o banco de dados, por exemplo: `dados_processados`
 4. Clique em "Create database" (Criar banco de dados)
 
-🖼️ **Print da tela de criação de banco de dados**
+
 ➡️ Crie um novo banco de dados no Athena.
 
 ### Passo 4: Criar uma Tabela
@@ -228,7 +227,7 @@ STORED AS PARQUET
 LOCATION 's3://meu-bucket/resultados/vendas_processadas/';
 ```
 
-🖼️ **Print do editor de consultas com o comando CREATE TABLE**
+
 ➡️ Execute o comando SQL para criar a tabela externa.
 
 ### Passo 5: Carregar Partições
@@ -281,7 +280,7 @@ WHERE ano = 2023 AND mes = 1 AND valor > 1000
 LIMIT 10;
 ```
 
-🖼️ **Print do editor de consultas com resultados de uma consulta**
+
 ➡️ Execute uma consulta SQL e observe os resultados.
 
 ### Passo 7: Exportar Resultados
@@ -291,7 +290,6 @@ Você pode baixar os resultados das consultas em vários formatos:
 1. Após executar uma consulta, clique em "Download results" (Baixar resultados)
 2. Selecione o formato desejado (CSV, JSON, etc.)
 
-🖼️ **Print da opção de download de resultados**
 ➡️ Clique no botão de download e selecione o formato desejado.
 
 ## Verificando a Integridade dos Dados
@@ -400,7 +398,7 @@ O AWS Glue pode rastrear automaticamente seus dados no S3 e criar um catálogo d
 3. Execute o crawler para popular o catálogo de dados
 4. Use o catálogo com Athena, Redshift Spectrum ou EMR
 
-🖼️ **Print da tela de configuração de um crawler no Glue**
+
 ➡️ Configure um crawler para rastrear seus dados no S3.
 
 ### 2. Amazon QuickSight
@@ -413,7 +411,6 @@ O QuickSight é um serviço de visualização de dados que pode se conectar dire
 4. Escolha o banco de dados e a tabela criados anteriormente
 5. Crie visualizações interativas dos seus dados
 
-🖼️ **Print da tela de criação de visualização no QuickSight**
 ➡️ Crie uma visualização dos seus dados processados.
 
 ### 3. Jupyter Notebooks no EMR
@@ -425,7 +422,7 @@ Você pode usar Jupyter Notebooks no EMR para análise interativa:
 3. Crie um novo notebook com kernel PySpark
 4. Use o código PySpark mostrado anteriormente para analisar seus dados
 
-🖼️ **Print da interface do Jupyter Notebook com código PySpark**
+
 ➡️ Use o Jupyter Notebook para análise interativa dos dados.
 
 ## Solução de Problemas Comuns
