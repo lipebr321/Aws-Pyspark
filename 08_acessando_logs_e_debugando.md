@@ -47,7 +47,6 @@ Para listar aplicações YARN:
 yarn application -list
 ```
 
-🖼️ **Print do terminal mostrando o resultado do comando yarn application -list**
 ➡️ Execute o comando para listar as aplicações YARN em execução ou concluídas recentemente.
 
 Para ver os logs de uma aplicação específica:
@@ -96,7 +95,7 @@ Para acessar o Spark History Server, configure um túnel SSH:
 ssh -i /caminho/para/MeuParDeChaves.pem -N -L 18080:localhost:18080 hadoop@ec2-xx-xx-xx-xx.compute-1.amazonaws.com
 ```
 
-🖼️ **Print da interface web do Spark History Server**
+
 ➡️ Acesse http://localhost:18080 no seu navegador após configurar o túnel SSH.
 
 ### 3. Logs do EMR
@@ -146,7 +145,7 @@ cat stdout
 cat stderr
 ```
 
-🖼️ **Print do terminal mostrando o conteúdo de um arquivo stderr**
+
 ➡️ Execute o comando cat stderr e observe a saída com mensagens de erro.
 
 #### Via YARN CLI
@@ -286,7 +285,6 @@ df_final.explain()
 df_final.explain(True)
 ```
 
-🖼️ **Print do terminal mostrando o resultado do comando explain()**
 ➡️ Execute df_final.explain(True) e observe o plano de execução detalhado.
 
 ### 6. Monitorar Métricas de Execução
@@ -297,7 +295,7 @@ Use a interface web do Spark para monitorar métricas em tempo real:
 - **YARN ResourceManager**: http://MASTER_DNS:8088
 - **Spark History Server**: http://MASTER_DNS:18080 (para aplicações concluídas)
 
-🖼️ **Print da interface web do Spark UI mostrando métricas de execução**
+
 ➡️ Acesse http://localhost:4040 no seu navegador após configurar o túnel SSH.
 
 ## Técnicas Avançadas de Debugging
